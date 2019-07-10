@@ -1,0 +1,49 @@
+<!--Arrays:-  The JavaScript Array object is a global object that is used in the construction of arrays;which are high-level, list-like objects.
+
+Here's how you declare an array and print the first item:-->
+var simpsons = ['homer','marge','lisa','bart'];
+document.write("<br/>")
+document.write(simpsons[0]);
+document.write("<br/>")
+
+
+<!--SORT ARRAY:-  Now sort the array and display it:-->
+simpsons.sort();
+//display the array
+for (var i = 0; i < simpsons.length; i++){
+document.write(simpsons[i]);
+}
+
+<!--LENGTH:-  The JavaScript Array object is a global object that is used in the construction of arrays;which are high-level, list-like objects.
+
+Here's how you declare an array and print the first item:-->
+var last = simpsons[simpsons.length - 1];
+document.write(last);//bart
+
+
+<!--PUSH/POP:-  In the next example I show you how to use push to add a new item. The opposite ofpush is pop which will remove it.-->
+var donnie = simpsons.push('Donnie');
+document.write(simpsons);
+simpsons.pop();
+
+
+<!--REMOVING ELEMENT:-  Remove element at a specific index-->
+delete a[4];
+//display the array
+for (var i = 0; i < a.length; i++){
+document.write(a[i])
+}
+
+
+<!--ARRAY POPULATION:-  Just like in many other programming languages, you can populate an array from a forloop.-->
+var numbers = [];
+for (var i = 0; i < 10; i++){
+numbers[i] = i + 1;
+}
+//display the array
+for (var i = 0; i < 10; i++){
+document.write(numbers[i]+"<br/>");
+}
+
+
+
