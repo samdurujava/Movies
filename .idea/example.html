@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var items = [];
+        function remove() {
+            var i = 0;
+            while (i < items.length) {
+                var item = document.getElementById(items[i]);
+                if (item != null) {
+                    if (item.children[0].checked) {
+                        var list = document.getElementById("list");
+                        list.removeChild(item);
+                        items.splice(i, 1);
+                    } else {
+                        i++;
+                    }
+                } else {
+                    i++;
+                }
+            }
+        }
+        function add() {
+            var item = prompt("Please enter a to do item:");
+            items.push(item);
+            var list = document.getElementById("list");
+            var info = document.createElement("P");
+            var check = document.createElement("INPUT");
+            var lbl = document.createElement("LABEL");
+            lbl.innerHTML = "Completed";
+            check.setAttribute("type", "checkbox");
+            check.setAttribute("id", "check");
+            info.innerHTML = items[items.length - 1];
+            info.setAttribute("id", items[items.length - 1]);
+            info.appendChild(check);
+            info.appendChild(lbl);
+            list.appendChild(info);
+        }
+    </script>
+</head>
+<body>
+<p id="list"></p>
+<button name="addBtn" onclick="add()">Add Item</button>
+<button name="listBtn" onclick="remove()">Delete Checked Items</button>
+</body>
+</html>
